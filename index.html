@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Locator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: #494611;
+    color: rgb(157, 138, 30);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: linear-gradient(to right, #efe550, #eaff00);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+    gap: 5px;
+}
+
+.search-box input {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.search-box button {
+    background: #f6ed3b;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== MAIN ===== */
+.main {
+    height: calc(100vh - 70px);
+    background: url("https://eu-central.storage.cloudconvert.com/tasks/e139174a-4faf-44a2-b7b0-d1b610dab5b2/Sandrone.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20260202%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20260202T030520Z&X-Amz-Expires=86400&X-Amz-Signature=f6c0858343c227cb1779b3810f0bd9a2311349a041bd5b29beb7d5437aa722e8&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sandrone.jpg%22&response-content-type=image%2Fjpeg&x-id=GetObject") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    background: rgba(40, 42, 15, 0.75);
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+/* ===== CENTER INPUT ===== */
+.center-box {
+    grid-column: 1 / 4;
+    background: rgba(248, 242, 56, 0.9);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.center-box h2 {
+    margin-bottom: 10px;
+}
+
+.center-box input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+/* ===== LEFT PANEL ===== */
+.panel {
+    background: rgba(114, 100, 9, 0.8);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.panel h3 {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.panel button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #afad1e;
+    color: white;
+    cursor: pointer;
+}
+
+.panel button:hover {
+    background: #ebeb25;
+}
+
+/* ===== STORE ===== */
+.store {
+    text-align: center;
+}
+
+.store img {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.location {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    grid-column: 1 / 4;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <a href="#">Shop</a>
+        <a href="#">Locate</a>
+    </div>
+
+    <div class="nav-title">Product Locator</div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+<div class="overlay">
+
+    <!-- CENTER -->
+    <div class="center-box">
+        <h2>Crave a gaming laptop? 🎮</h2>
+        <p>Enter your budget and let's find the right one for you! :P</p><br>
+        <input type="number" placeholder="Enter here...">
+    </div>
+
+    <!-- LEFT -->
+    <div class="panel">
+        <h3>Brand & Discounts</h3>
+        <button>Acer</button>
+        <button>Asus</button>
+        <button>Lenovo</button>
+        <button>Apply Discount</button>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="panel store">
+        <h3>Store Location</h3>
+        <img src="villman.png" alt="VillMan">
+        <p class="location">
+            Cyberzone, SM City Fairview<br>
+            Quirino Highway, QC
+        </p>
+        <br>
+        <img src="silicon.png" alt="Silicon Valley">
+        <p class="location">
+            SM City North EDSA Annex<br>
+            Quezon City
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © Student Name
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
